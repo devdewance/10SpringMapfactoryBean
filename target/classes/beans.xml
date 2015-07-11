@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="cusID" class="com.test.Customer">
+			<property name="maps" >
+				<bean class="org.springframework.beans.factory.config.MapFactoryBean">
+					<property name="targetMapClass" value="java.util.HashMap"></property>
+					<property name="sourceMap"> 
+						<map>
+							<entry key="key1" value="PARASHAR"/>
+							<entry key="key2" value="DEVASHISH"/>
+							<entry key="key3" value="PANDEY"/>
+					  </map>
+					</property>
+			 </bean>
+		 </property>
+	</bean>
+</beans>
